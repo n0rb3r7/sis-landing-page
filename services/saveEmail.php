@@ -11,24 +11,23 @@ try {
 } catch (PDOException $error) {
     echo 'Connection error: ' . $error->getMessage();
 }
-
-if (empty($_POST['thisemail'])) {
+if (empty($_POST['thisemail']) || is_null($_POST['thisemail'])) {
     $error = "Ingrese su email";
 } else {
     if (!filter_var($_POST['thisemail'], FILTER_VALIDATE_EMAIL)) {
         $error = "Email incorrecto";
     }
     $email = $_POST['thisemail'];
-}
-$checkEmail = $db_connection->prepare("SELECT * FROM useremails WHERE email=:email");
-$checkEmail->bindParam(':email', $email);
-$checkEmail->execute();
-if ($checkEmail->rowCount() != 0) {
-    $error = "Email ya registrado, intente con otro.";
-} else {
-    $saveEmail = $db_connection->prepare("INSERT INTO useremails (email) VALUES (:email)");
-    $saveEmail->bindValue(':email', $email);
-    $saveEmail->execute();
+    $checkEmail = $db_connection->prepare("SELECT * FROM useremails WHERE email=:email");
+    $checkEmail->bindParam(':email', $email);
+    $checkEmail->execute();
+    if ($checkEmail->rowCount() != 0) {
+        $error = "Email ya registrado, intente con otro.";
+    } else {
+        $saveEmail = $db_connection->prepare("INSERT INTO useremails (email) VALUES (:email)");
+        $saveEmail->bindValue(':email', $email);
+        $saveEmail->execute();
+    }
 }
 if (empty($error)) {
     $output = json_encode(array('type' => 'message', 'text' => "¡Muchas gracias! Hemos registrado su email."));
