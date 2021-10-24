@@ -1,0 +1,54 @@
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(230, 170, 92);
+  height: 100vh;
+}
+.container {
+  padding: 0 3% 0 3%;
+}
+.div-left {
+  align-self: stretch;
+  width: 40%;
+  background-color: aquamarine;
+}
+.div-right {
+  background-color: burlywood;
+  align-self: stretch;
+  width: 40%;
+}
+.logo {
+  width: 20vw;
+  align-self: center;
+}
+.button {
+  background-color: #c60c35;
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+input {
+  border: dotted 2px #c60c35;
+  padding: 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.error {
+  color: #c60c35;
+}
+.success {
+  color: rgb(127, 208, 255);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiS! Languages & Wine</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="div-left container">
+        <div>
+          <img
+            class="logo"
+            src="./img/sis-languages-and-wine-logo-b.svg"
+            alt=""
+          />
+        </div>
+        <h1 id="countdown"></h1>
+        <div>
+          <h1>
+            ¡Te ayudamos a vender y comunicar el vino al mundo! Ofrecemos cursos
+            y capacitaciones de inglés vitivinícola.
+          </h1>
+        </div>
+        <div>
+          <h2>
+            Inscríbete para nuestra Masterclass gratuita
+            <a
+              href="https://google.com.ar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              link a google forms
+            </a>
+          </h2>
+        </div>
+        <div>
+          <h3>¡Suscríbete a nuestra newsletter y a nuestro blog!</h3>
+          <form autocomplete="on">
+            <input
+              type="email"
+              id="thisemail"
+              name="thisemail"
+              placeholder="nombre@email.com"
+              required
+            />
+            <input id="submit" class="button" type="submit" />
+            <div id="message"></div>
+          </form>
+        </div>
+      </div>
+      <div class="div-right container">right</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#submit").click(function (e) {
+          e.preventDefault();
+          var thisemail = $("#thisemail").val();
+          $.ajax({
+            type: "POST",
+            url: "./services/saveEmail.php",
+            dataType: "json",
+            data: {
+              thisemail: thisemail,
+            },
+            async: true,
+            success: function (response) {
+              if (response.type == "error") {
+                $("#message").html(
+                  "<h5 class='error'>" + response.text + "</h5>"
+                );
+                console.log(response.text);
+              } else if (response.type == "message") {
+                $("#message").html(
+                  "<h5 class='success'>" + response.text + "</h5>"
+                );
+                console.log(response.text);
+              }
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
