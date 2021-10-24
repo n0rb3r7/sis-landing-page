@@ -44,7 +44,7 @@
         </div>
         <div>
           <h3>¡Suscríbete a nuestra newsletter y a nuestro blog!</h3>
-          <form autocomplete="on">
+          <form id="miniform" autocomplete="on">
             <input
               type="email"
               id="thisemail"
@@ -75,16 +75,20 @@
             },
             async: true,
             success: function (response) {
+              console.log(response.text);
               if (response.type == "error") {
                 $("#message").html(
                   "<h5 class='error'>" + response.text + "</h5>"
                 );
-                console.log(response.text);
+                $("#miniform").trigger("reset");
               } else if (response.type == "message") {
                 $("#message").html(
                   "<h5 class='success'>" + response.text + "</h5>"
                 );
-                console.log(response.text);
+                setTimeout(function () {
+                  window.location.href =
+                    "https://sislanguagesandwine.com/blog/";
+                }, 2000);
               }
             },
           });
