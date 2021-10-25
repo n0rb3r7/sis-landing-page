@@ -150,10 +150,13 @@ a:hover {
     width: 90%;
   }
   .input {
-    max-width: calc(40% - 15px);
+    width: calc(45% - 15px);
   }
   .button {
-    max-width: 40%;
+    width: 45%;
+  }
+  .divider {
+    width: 90%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -172,9 +175,10 @@ a:hover {
 
   .div-left {
     width: 100%;
+    padding-bottom: 5vw;
   }
   .div-right {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
   }
   .logo {
@@ -203,6 +207,6 @@ a:hover {
     max-width: calc(100% - 15px);
   }
   .button {
-    max-width: 100%;
+    width: 100%;
   }
 }
