@@ -54,8 +54,13 @@ h3 {
   width: 5vw;
   align-self: center;
 }
+.link-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .logo-right {
-  width: 100%;
+  width: 60%;
 }
 .button {
   background-color: #c60c35;
@@ -89,10 +94,12 @@ h3 {
 .error {
   color: #a4c60c;
   font-size: 2rem;
+  margin: 0;
 }
 .success {
   color: rgb(127, 208, 255);
   font-size: 2rem;
+  margin: 0;
 }
 a {
   color: #7adbec;
@@ -136,6 +143,7 @@ a:hover {
   width: 70%;
   background-color: black;
 }
+
 @media screen and (max-width: 1400px) {
   h1 {
     font-size: 1.8rem;
@@ -178,11 +186,11 @@ a:hover {
     padding-bottom: 5vw;
   }
   .div-right {
-    height: 50vh;
+    height: 70vh;
     width: 100%;
   }
-  .logo {
-    display: none;
+  .logo-right {
+    width: 80%;
   }
   .countdown {
     width: 100%;
@@ -191,8 +199,8 @@ a:hover {
   }
   .box {
     font-size: 0.7rem;
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
     margin: 10px;
   }
   #days,

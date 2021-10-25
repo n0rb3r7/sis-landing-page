@@ -1,4 +1,4 @@
-var end = new Date("12/17/2021 9:30 AM");
+var end = new Date("10/30/2021 9:30 AM");
 
 var _second = 1000;
 var _minute = _second * 60;
@@ -12,7 +12,7 @@ function showRemaining() {
   if (distance < 0) {
     clearInterval(timer);
     document.getElementById("countdown").innerHTML =
-      "¡Se ha acabado el tiempo de la promoción!";
+      "¡La promoción terminó! Espera atento nuevas noticias.";
 
     return;
   }
