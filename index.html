@@ -15,37 +15,52 @@
   </head>
   <body>
     <div class="main">
-      <div class="div-left container">
-        <div>
-          <img
-            class="logo"
-            src="./img/sis-languages-and-wine-logo-b.svg"
-            alt=""
-          />
-        </div>
-        <h1 id="countdown"></h1>
-        <div>
-          <h1>
-            ¡Te ayudamos a vender y comunicar el vino al mundo! Ofrecemos cursos
-            y capacitaciones de inglés vitivinícola.
-          </h1>
-        </div>
-        <div>
+      <div class="div-left">
+        <div style="padding: 3vw">
+          <div>
+            <h1>
+              Inscríbete para nuestra Masterclass gratuita
+              <a
+                href="https://google.com.ar"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                link a google forms
+              </a>
+            </h1>
+          </div>
+          <div class="countdown">
+            <div class="box">
+              <div id="days"></div>
+              Días
+            </div>
+            <div class="box">
+              <div id="hours"></div>
+              Horas
+            </div>
+            <div class="box">
+              <div id="minutes"></div>
+              Minutos
+            </div>
+            <div class="box">
+              <div id="seconds"></div>
+              Segundos
+            </div>
+          </div>
+          <h1 id="countdown"></h1>
+          <div class="divider"></div>
+
           <h2>
-            Inscríbete para nuestra Masterclass gratuita
-            <a
-              href="https://google.com.ar"
-              target="_blank"
-              rel="noopener noreferrer"
+            ¡Te ayudamos a vender y comunicar el vino al mundo! Ofrecemos
+            <a href="https://sislanguagesandwine.com/cursos/" target="_blank"
+              >cursos y capacitaciones</a
             >
-              link a google forms
-            </a>
+            de inglés vitivinícola.
           </h2>
-        </div>
-        <div>
           <h3>¡Suscríbete a nuestra newsletter y a nuestro blog!</h3>
           <form id="miniform" autocomplete="on">
             <input
+              class="input"
               type="email"
               id="thisemail"
               name="thisemail"
@@ -57,7 +72,14 @@
           </form>
         </div>
       </div>
-      <div class="div-right container">right</div>
+      <div class="div-right">
+        <a href="https://sislanguagesandwine.com/">
+          <img
+            class="logo-right"
+            src="./img/sis-languages-and-wine-logo-b.svg"
+            alt=""
+        /></a>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/main.js"></script>

@@ -21,10 +21,10 @@ function showRemaining() {
   var minutes = Math.floor((distance % _hour) / _minute);
   var seconds = Math.floor((distance % _minute) / _second);
 
-  document.getElementById("countdown").innerHTML = days + " días, ";
-  document.getElementById("countdown").innerHTML += hours + " horas, ";
-  document.getElementById("countdown").innerHTML += minutes + " minutos y ";
-  document.getElementById("countdown").innerHTML += seconds + " segundos";
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
 }
 
 timer = setInterval(showRemaining, 1000);
