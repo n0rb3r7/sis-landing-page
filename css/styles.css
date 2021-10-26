@@ -83,7 +83,7 @@ h3 {
   border: solid 2px #140005;
 }
 .input {
-  border: dotted 2px #c60c35;
+  border: solid 2px rgb(80, 1, 105);
   background-color: #f3f3f3;
   padding: 15px 0px 15px 10px;
   text-decoration: none;
@@ -186,8 +186,10 @@ a:hover {
     padding-bottom: 5vw;
   }
   .div-right {
-    height: 70vh;
+    height: 55vh;
     width: 100%;
+    background-size: 120%;
+    background-position-y: -100px;
   }
   .logo-right {
     width: 80%;
@@ -198,21 +200,24 @@ a:hover {
     justify-content: space-evenly;
   }
   .box {
-    font-size: 0.7rem;
-    width: 15vw;
-    height: 15vw;
-    margin: 10px;
+    font-size: 0.5rem;
+    width: 5vw;
+    height: 5vw;
+    margin: 5px;
   }
   #days,
   #hours,
   #minutes,
   #seconds {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
   }
   .input {
     width: 100% !important;
     max-width: calc(100% - 15px);
+  }
+  .divider {
+    width: 100%;
   }
   .button {
     width: 100%;
