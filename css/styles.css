@@ -41,7 +41,7 @@ h3 {
 }
 .div-right {
   background-color: burlywood;
-  background: url(https://images.pexels.com/photos/1479706/pexels-photo-1479706.jpeg?cs=srgb&dl=pexels-adonyi-g%C3%A1bor-1479706.jpg&fm=jpg);
+  background: url(https://images.pexels.com/photos/9961842/pexels-photo-9961842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-repeat: no-repeat;
   background-size: cover;
   align-self: stretch;
@@ -56,7 +56,7 @@ h3 {
 }
 .link-logo {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 .logo-right {
@@ -155,7 +155,7 @@ a:hover {
     font-size: 1.5rem;
   }
   .countdown {
-    width: 90%;
+    width: 20%;
   }
   .input {
     width: calc(45% - 15px);
@@ -164,7 +164,23 @@ a:hover {
     width: 45%;
   }
   .divider {
-    width: 90%;
+    width: 60%;
+  }
+  .countdown {
+    width: 60%;
+  }
+  .box {
+    font-size: 0.5rem;
+    width: 3vw;
+    height: 3vw;
+    margin: 5px;
+  }
+  #days,
+  #hours,
+  #minutes,
+  #seconds {
+    font-size: 2.5rem;
+    font-weight: 800;
   }
 }
 @media only screen and (max-width: 600px) {
