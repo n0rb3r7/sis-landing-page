@@ -15,7 +15,9 @@ if (empty($_POST['thisemail']) || is_null($_POST['thisemail'])) {
     $error = "Ingrese su email";
 } else {
     if (!filter_var($_POST['thisemail'], FILTER_VALIDATE_EMAIL)) {
-        $error = "Email incorrecto";
+        $error = "Formato de email incorrecto.";
+        $output = json_encode(array('type' => 'error', 'text' =>  $error));
+        die($output);
     }
     $email = $_POST['thisemail'];
     $checkEmail = $db_connection->prepare("SELECT * FROM useremails WHERE email=:email");
